@@ -11,7 +11,6 @@
 		C1144B151C887EBF00A75271 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C1144B141C887EBF00A75271 /* AppDelegate.m */; };
 		C1144B181C887EBF00A75271 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1144B171C887EBF00A75271 /* ViewController.m */; };
 		C1144B1D1C887EBF00A75271 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1144B1C1C887EBF00A75271 /* Assets.xcassets */; };
-		C1144B201C887EBF00A75271 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1144B1E1C887EBF00A75271 /* LaunchScreen.storyboard */; };
 		C1144B2E1C8883FE00A75271 /* ingenicologo.png in Resources */ = {isa = PBXBuildFile; fileRef = C1144B2D1C8883FE00A75271 /* ingenicologo.png */; };
 		C1144B381C88847100A75271 /* IPAddress.m in Sources */ = {isa = PBXBuildFile; fileRef = C1144B301C88847100A75271 /* IPAddress.m */; };
 		C1144B391C88847100A75271 /* MessageHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = C1144B321C88847100A75271 /* MessageHandler.m */; };
@@ -61,7 +60,6 @@
 		C1144B161C887EBF00A75271 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		C1144B171C887EBF00A75271 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		C1144B1C1C887EBF00A75271 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		C1144B1F1C887EBF00A75271 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C1144B211C887EBF00A75271 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C1144B2D1C8883FE00A75271 /* ingenicologo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ingenicologo.png; sourceTree = SOURCE_ROOT; };
 		C1144B2F1C88847100A75271 /* IPAddress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IPAddress.h; sourceTree = "<group>"; };
@@ -132,7 +130,6 @@
 			isa = PBXGroup;
 			children = (
 				C1144B1C1C887EBF00A75271 /* Assets.xcassets */,
-				C1144B1E1C887EBF00A75271 /* LaunchScreen.storyboard */,
 				C1144B211C887EBF00A75271 /* Info.plist */,
 				C1144B2D1C8883FE00A75271 /* ingenicologo.png */,
 				C1144B111C887EBF00A75271 /* main.m */,
@@ -232,7 +229,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C1144B201C887EBF00A75271 /* LaunchScreen.storyboard in Resources */,
 				C1144B2E1C8883FE00A75271 /* ingenicologo.png in Resources */,
 				C1144B1D1C887EBF00A75271 /* Assets.xcassets in Resources */,
 			);
@@ -264,17 +260,6 @@
 			targetProxy = C1144B491C88867900A75271 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		C1144B1E1C887EBF00A75271 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C1144B1F1C887EBF00A75271 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		C1144B221C887EBF00A75271 /* Debug */ = {

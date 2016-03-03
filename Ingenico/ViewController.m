@@ -19,8 +19,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
-    [PolymorphicSwiperService sharedSwiperServiceInstance];
-    
+    [IngenicoDriver sharedIngenicoInstance];
+
     devicesTable = [[UITableView alloc] initWithFrame:self.view.frame style:UITableViewStylePlain];
     devicesTable.delegate = self;
     devicesTable.dataSource = self;
