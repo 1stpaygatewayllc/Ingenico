@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "558D6F7EAE0C516455F919C8E0285D5E01F04C5C",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "21A0F4C573119CC0F6A620D1F516A6B5750EDBC2" : 0,
+    "558D6F7EAE0C516455F919C8E0285D5E01F04C5C" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "F74E5724-EDC9-4FC8-80DF-BDA9C6D15888",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "21A0F4C573119CC0F6A620D1F516A6B5750EDBC2" : "mobilesdkfw\/",
+    "558D6F7EAE0C516455F919C8E0285D5E01F04C5C" : "Ingenico\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Ingenico",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Ingenico.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/1stpaygatewayllc\/mobilesdkfw.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "21A0F4C573119CC0F6A620D1F516A6B5750EDBC2"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/1stpaygatewayllc\/Ingenico.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "558D6F7EAE0C516455F919C8E0285D5E01F04C5C"
+    }
+  ]
+}
