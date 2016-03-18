@@ -9,12 +9,17 @@
 #import "ViewController.h"
 #import <mobilesdkfw/mobilesdkfw.h>
 #import "AppDelegate.h"
+#import "Ingenico-Swift.h"
+#import <mobilesdkfw/mobilesdkfw-Swift.h>
+
+@import mobilesdkfw;
 
 @interface ViewController ()
 
 @end
 
 @implementation ViewController
+
 
 
 @synthesize cardData;
@@ -29,9 +34,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [CommManager sharedCommSingletonDelegate];
+    
     self.view.backgroundColor = [UIColor whiteColor];
     [IngenicoDriver sharedIngenicoInstance];
-
+    devicesArray = [[NSMutableArray alloc] init];
+    [devicesArray addObject:@{@"ip":@"192.168.100.118",@"mac":@"762343245234523"}];
     devicesTable = [[UITableView alloc] initWithFrame:self.view.frame style:UITableViewStylePlain];
     devicesTable.delegate = self;
     devicesTable.dataSource = self;
@@ -40,6 +48,9 @@
     Message * msg = [[Message alloc] initWithRoutKey:@"internal.discovernetowrkswipers"];
     msg.params = @{@"device":@"ipp320",@"selfip":[AppDelegate sharedInstance].selfIP};
     [[MessageDispatcher sharedDispacherInstance] addMessageToBus:msg];
+    
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -363,6 +374,35 @@
     return(cell);
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    return 50;
+}
+
+- (UIView*)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+{
+    
+    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, tableView.frame.size.width, 50)];
+    view.userInteractionEnabled = true;
+    UIButton * buttonEnable = [UIButton buttonWithType:UIButtonTypeCustom];
+    buttonEnable.frame = CGRectMake(5, 5, 200, 40);
+    buttonEnable.layer.borderColor = [UIColor blackColor].CGColor;
+    buttonEnable.layer.borderWidth = 1.0;
+    [buttonEnable setTitle:@"Accept Card" forState:UIControlStateNormal];
+    [buttonEnable setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [buttonEnable addTarget:self action:@selector(acceptCard) forControlEvents:UIControlEventTouchUpInside];
+    [view addSubview:buttonEnable];
+    
+    
+    UIButton * EMVEnable = [UIButton buttonWithType:UIButtonTypeCustom];
+    EMVEnable.frame = CGRectMake(buttonEnable.frame.origin.x + buttonEnable.frame.size.width + 10, 5, 200, 40);
+    EMVEnable.layer.borderColor = [UIColor blackColor].CGColor;
+    EMVEnable.layer.borderWidth = 1.0;
+    [EMVEnable setTitle:@"EMV TRANSACTION" forState:UIControlStateNormal];
+    [EMVEnable setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [EMVEnable addTarget:self action:@selector(emvtrans) forControlEvents:UIControlEventTouchUpInside];
+    [view addSubview:EMVEnable];
+    return view;
+}
 
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
     return 0;
@@ -374,4 +414,18 @@
     UIView *view = [[UIView alloc] initWithFrame:CGRectZero];
     return view;
 }
+////////////////////////////////
+-(void)emvtrans
+{
+    Message * msg = [[Message alloc] initWithRoutKey:@"internal.emvtxn"];
+    [[MessageDispatcher sharedDispacherInstance] addMessageToBus:msg];
+}
+
+-(void)acceptCard
+{
+    Message * msg = [[Message alloc] initWithRoutKey:@"internal.acceptcard"];
+    msg.params = @{@"displaymessage":@"HELLO MASTER"};
+    [[MessageDispatcher sharedDispacherInstance] addMessageToBus:msg];
+}
+
 @end

@@ -14,11 +14,11 @@
 		C1144B2E1C8883FE00A75271 /* ingenicologo.png in Resources */ = {isa = PBXBuildFile; fileRef = C1144B2D1C8883FE00A75271 /* ingenicologo.png */; };
 		C1144B381C88847100A75271 /* IPAddress.m in Sources */ = {isa = PBXBuildFile; fileRef = C1144B301C88847100A75271 /* IPAddress.m */; };
 		C1144B391C88847100A75271 /* MessageHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = C1144B321C88847100A75271 /* MessageHandler.m */; };
-		C1144B3A1C88847100A75271 /* RegexKitLite.m in Sources */ = {isa = PBXBuildFile; fileRef = C1144B351C88847100A75271 /* RegexKitLite.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		C1144B3B1C88847100A75271 /* UtiityRoutines.m in Sources */ = {isa = PBXBuildFile; fileRef = C1144B361C88847100A75271 /* UtiityRoutines.m */; };
 		C1144B3D1C8884DC00A75271 /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C1144B3C1C8884DC00A75271 /* libicucore.tbd */; };
 		C1144B471C88867900A75271 /* mobilesdkfw.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1144B441C88858500A75271 /* mobilesdkfw.framework */; };
 		C1144B481C88867900A75271 /* mobilesdkfw.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C1144B441C88858500A75271 /* mobilesdkfw.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C133CC2C1C99A3A000C74716 /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = C133CC2B1C99A3A000C74716 /* Test.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,12 +67,12 @@
 		C1144B311C88847100A75271 /* MessageHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageHandler.h; sourceTree = "<group>"; };
 		C1144B321C88847100A75271 /* MessageHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageHandler.m; sourceTree = "<group>"; };
 		C1144B331C88847100A75271 /* NSObject_UtilityRoutines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSObject_UtilityRoutines.h; sourceTree = "<group>"; };
-		C1144B341C88847100A75271 /* RegexKitLite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegexKitLite.h; sourceTree = "<group>"; };
-		C1144B351C88847100A75271 /* RegexKitLite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegexKitLite.m; sourceTree = "<group>"; };
 		C1144B361C88847100A75271 /* UtiityRoutines.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UtiityRoutines.m; sourceTree = "<group>"; };
 		C1144B371C88847100A75271 /* UtilityRoutines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UtilityRoutines.h; sourceTree = "<group>"; };
 		C1144B3C1C8884DC00A75271 /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
 		C1144B3F1C88858500A75271 /* mobilesdkfw.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = mobilesdkfw.xcodeproj; path = ../mobilesdkfw/mobilesdkfw.xcodeproj; sourceTree = "<group>"; };
+		C133CC2A1C99A3A000C74716 /* Ingenico-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Ingenico-Bridging-Header.h"; sourceTree = "<group>"; };
+		C133CC2B1C99A3A000C74716 /* Test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,8 +113,6 @@
 				C1144B311C88847100A75271 /* MessageHandler.h */,
 				C1144B321C88847100A75271 /* MessageHandler.m */,
 				C1144B331C88847100A75271 /* NSObject_UtilityRoutines.h */,
-				C1144B341C88847100A75271 /* RegexKitLite.h */,
-				C1144B351C88847100A75271 /* RegexKitLite.m */,
 				C1144B361C88847100A75271 /* UtiityRoutines.m */,
 				C1144B371C88847100A75271 /* UtilityRoutines.h */,
 				C1144B131C887EBF00A75271 /* AppDelegate.h */,
@@ -122,6 +120,8 @@
 				C1144B161C887EBF00A75271 /* ViewController.h */,
 				C1144B171C887EBF00A75271 /* ViewController.m */,
 				C1144B101C887EBF00A75271 /* Supporting Files */,
+				C133CC2B1C99A3A000C74716 /* Test.swift */,
+				C133CC2A1C99A3A000C74716 /* Ingenico-Bridging-Header.h */,
 			);
 			path = Ingenico;
 			sourceTree = "<group>";
@@ -241,11 +241,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C1144B3A1C88847100A75271 /* RegexKitLite.m in Sources */,
 				C1144B181C887EBF00A75271 /* ViewController.m in Sources */,
 				C1144B381C88847100A75271 /* IPAddress.m in Sources */,
 				C1144B151C887EBF00A75271 /* AppDelegate.m in Sources */,
 				C1144B3B1C88847100A75271 /* UtiityRoutines.m in Sources */,
+				C133CC2C1C99A3A000C74716 /* Test.swift in Sources */,
 				C1144B121C887EBF00A75271 /* main.m in Sources */,
 				C1144B391C88847100A75271 /* MessageHandler.m in Sources */,
 			);
@@ -301,6 +301,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				GENERATE_MASTER_OBJECT_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -342,6 +343,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				GENERATE_MASTER_OBJECT_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
@@ -354,6 +356,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = Ingenico/Info.plist;
@@ -361,6 +364,9 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.goemerchant.Ingenico;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_INCLUDE_PATHS = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Ingenico/Ingenico-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -368,6 +374,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = Ingenico/Info.plist;
@@ -375,6 +382,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.goemerchant.Ingenico;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_INCLUDE_PATHS = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Ingenico/Ingenico-Bridging-Header.h";
 			};
 			name = Release;
 		};
